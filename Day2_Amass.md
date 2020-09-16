@@ -200,75 +200,13 @@ Subcommands:
 
 ```
 
-II. How to Install?
+#### Using the Tool:
 
-Prebuilt
-A precompiled version is available for each release.
-
-If your operating environment supports Snap, you can click here to install, or perform the following from the command-line:
-
-$ sudo snap install amass
-If you would like snap to get you the latest unstable build of amass, type the following command:
-
-$ sudo snap install –edge amass
-
-From Source
-If you would prefer to build your own binary from the latest version of the source code, make sure you have a correctly configured Go >= 1.10 environment. More information about how to achieve this can be found on the golang website. Then, take the following steps:
-
-Download amass:
-$ go get -u github.com/caffix/amass
-At this point, the amass binary should be in $GOPATH/bin.
-
-Several wordlists can be found in the following directory:
-$ ls $GOPATH/src/github.com/caffix/amass/wordlists/
-
-In this article we will install from source.
-Now, let’s go.
-
-Install golang:
-With ubuntu 14.04LTS:
-Upgrade to apply latest security updates
-
-$ sudo apt-get update
-$ sudo apt-get -y upgrade
-
-Download the Go language:
-
-$ wget https://dl.google.com/go/go1.10.1.linux-amd64.tar.gz
-
-Now extract the downloaded archive and install it to the desired location on the system.
-
-$ sudo tar -xvf go1.10.1.linux-amd64.tar.gz
-$ sudo mv go /usr/local
-
-Setup Go Environment
-GOROOT is the location where Go package is installed on your system.
-
-export GOROOT=/usr/local/go
-
-GOPATH is the location of your work directory. For example my project directory is ~/Projects/Proj.
-
-export GOPATH=$HOME/Projects/Proj
-
-Now set the PATH variable to access go binary system wide.
-
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-Verify Installation
-
-go version
-
-Result:
-
-Download amass:
-
-go get -u github.com/caffix/amass
-
-III. Using the Tool
 The most basic use of the tool, which includes reverse DNS lookups and name alterations:
 
+```bash
 $ amass -d example.com
-
+```
 Result:
 
 Add some additional domains to the enumeration:
