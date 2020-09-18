@@ -77,7 +77,6 @@ You’ll need to make sure your Go pathing is set up correctly so you can run it
 
 
 
-```
 Docker
 ```bash
 docker build -t amass https://github.com/OWASP/Amass.git
